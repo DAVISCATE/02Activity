@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Itim&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Itim&display=swap" rel="stylesheet">
+<style type="text/css">
+	h1,h2,h3{
+		font-family: 'Indie Flower', cursive;
+	}
+	p,td{
+		font-family: 'Itim', cursive;
+	}
+	img{
+		height: 100px;
+		width: 80px;
+	}
+</style>
+
+	<title>Q3 Exercise 3</title>
+</head>
+<body bg-light>
+	<div class="contairer">
+	<h1>Bootstrap Tables</h1>
+	<table class="table table-hover table-light">
+	<thead class="thead-dark">
+		<tr>
+			<th>Profile Picture</th>
+			<th>Firstname</th>
+			<th>Lastname</th>
+			<th>Grade and Section</th>
+		</tr>
+		<tr>
+			<td><img src="https://cdn.shopify.com/s/files/1/0416/8083/0620/articles/01132022_soc_pinterestboardcoverupdate_HK02_1200x1200_cfb385ea-dd1c-4fbf-bc9b-4f33fdb6f4dc_1200x.png?v=1667248017"></td>
+			<td class="font-italic">Kitty</td>
+			<td class="font-italic">White</td>
+			<td class="font-italic">3-Emerald</td>
+		</tr>
+		<tr>
+			<td class="bg-info"><img src="https://cdn.shopify.com/s/files/1/0416/8083/0620/articles/01132022_soc_pinterestboardcoverupdate_CN_1200x1200_10255920-d001-4530-a20e-3748a1ee61d8_1200x.png?v=1646098286"></td>
+			<td class="bg-info">Cinnamoroll</td>
+			<td class="bg-info">N/A</td>
+			<td class="bg-info">3-Emerald</td>
+		</tr>
+		<tr>
+			<td><img src="http://cdn.shopify.com/s/files/1/0416/8083/0620/articles/soc_mymelodyFOTMbio_12292021_01_1200x1200_55e6a78c-944b-4669-b5e4-4419633ab4b3_600x.png?v=1642031492"></td>
+			<td class="font-italic">My</td>
+			<td class="font-italic">Melody</td>
+			<td class="font-italic">3-Emerald</td>
+		</tr>
+		<tr>
+			<td class="bg-info"><img src="https://cdn.shopify.com/s/files/1/0416/8083/0620/articles/01132022_soc_pinterestboardcoverupdate_TX_1200x1200_26fa4073-a790-40e6-8730-67b5abc8c506_1200x.png?v=1659375167"></td>
+			<td class="bg-info">Tuxedo</td>
+			<td class="bg-info">Sam</td>
+			<td class="bg-info">3-Emerald</td>
+		</tr>
+		<tr>
+			<td><img src="https://cdn.shopify.com/s/files/1/0416/8083/0620/files/01132022_soc_pinterestboardcoverupdate_KU_1200x1200_1_1024x1024.png?v=1664470975"></td>
+			<td class="font-italic">Kuromi</td>
+			<td class="font-italic">N/A</td>
+			<td class="font-italic">3-Emerald</td>
+		</tr>
+</thead>
+</table>
+<h2 class="bg-info" text-light>Adding new students</h2>
+<div class="container bg-light text-light">
+<form class="form-group">
+	Enter Firstname: <input type="text" name="Firstname" class="form-control">
+	Enter Lastname:<input type="text" name="Lastname" class="form-control">
+	Choose Item: 
+	<select class="form-control">
+		<option>Red</option>
+		<option>White</option>
+		<option>Pink</option>
+		<option>Blue</option>
+		<option>Purple</option>
+	</select>
+	<br>
+	Date Enrolled: <input type="date" name="enrolled" class="form-control">
+	<br>
+	<input type="file" name="picture">
+	<br><br>
+	<input type="submit" name="ADD STUDENTS" class="btn btn-primary btn-block">
+	<input type="reset" name="CANCLE" class="btn btn-light btn-block">
+</form>
+<h6 class="bg-info text-dark">References</h6>
+<a href="https://www.sanrio.com/blogs/sanrio/sanrio-friend-of-the-month-hello-kitty-1">Sanrio Friend of the Month</a>
+<br>
+<small>&copy;CDavis2023</small>
+</div>
+</table>
+</div>
+
+</body>
+</html>
