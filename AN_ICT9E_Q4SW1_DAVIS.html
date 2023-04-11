@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz Mansion</title>
+</head>
+<body>
+	<h1>Welcome to Quiz Mansion</h1>
+	<div id="question1">
+		<h3>Question 1: Which keyword is used to declare a variable in JavaScript?</h3>
+		<input type="radio" id="option1" name="question1" value="option1">
+		<label for="option1">A. var</label><br>
+		<input type="radio" id="option2" name="question1" value="option2">
+		<label for="option2">B. int</label><br>
+		<input type="radio" id="option3" name="question1" value="option3">
+		<label for="option3">C. float</label><br>
+		<input type="radio" id="option4" name="question1" value="option4">
+		<label for="option4">D. double</label><br>
+		<button type="button" onclick="validateAnswer(1)">Submit</button>
+	</div>
+
+	<div id="question2" style="display:none;">
+		<h3>Question 2: Which of the following is NOT a primitive data type in JavaScript?</h3>
+		<input type="radio" id="option1" name="question2" value="option1">
+		<label for="option1">A. number</label><br>
+		<input type="radio" id="option2" name="question2" value="option2">
+		<label for="option2">B. string</label><br>
+		<input type="radio" id="option3" name="question2" value="option3">
+		 <label for="option3">C. boolean</label><br>
+		<input type="radio" id="option4" name="question2" value="option4">
+		<label for="option4">D. array</label><br>
+		<button type="button" onclick="validateAnswer(2)">Submit</button>
+	</div>
+
+	<div id="question3" style="display:none;">
+		<h3>Question 3: Which built-in method in JavaScript returns the index of the first occurrence of a specified value in a string?</h3>
+		<input type="radio" id="option1" name="question3" value="option1">
+		<label for="option1">A. indexOf()</label><br>
+		<input type="radio" id="option2" name="question3" value="option2">
+		<label for="option2">B. search()</label><br>
+		<input type="radio" id="option3" name="question3" value="option3">
+		<label for="option3">C. substr()</label><br>
+		<input type="radio" id="option4" name="question3" value="option4">
+		<label for="option4">D. slice()</label><br>
+		<button type="button" onclick="validateAnswer(3)">Submit</button>
+	</div>
+
+	<div id="question4" style="display:none;">
+		<h3>Question 4: What is the purpose of the 'this' keyword in JavaScript?</h3>
+		<input type="radio" id="option1" name="question4" value="option1">
+		<label for="option1">A. It refers to the current object</label><br>
+		<input type="radio" id="option2" name="question4" value="option2">
+		<label for="option2">B. It refers to the previous object</label><br>
+		<input type="radio" id="option3" name="question4" value="option3">
+		<label for="option3">C. It refers to the next object</label><br>
+		<input type="radio" id="option4" name="question4" value="option4">
+		<label for="option4">D. It refers to the global object</label><br>
+		<button type="button" onclick="validateAnswer(4)">Submit</button>
+	</div>
+
+	<div id="question5" style="display:none;">
+		<h3>Question 5: Which of the following is NOT a valid way to declare a function in JavaScript?</h3>
+		<input type="radio" id="option1" name="question5" value="option1">
+		<label for="option1">A. function myFunction() {}</label><br>
+		<input type="radio" id="option2" name="question5" value="option2">
+		<label for="option2">B. var myFunction = function() {}</label><br>
+		<input type="radio" id="option3" name="question5" value="option3">
+		<label for="option3">C. const myFunction = () => {}</label><br>
+		<input type="radio" id="option4" name="question5" value="option4">
+		<label for="option4">D. let myFunction = () => {}</label><br>
+		<button type="button" onclick="validateAnswer(5)">Submit</button>
+	</div>
+
+	<div id="correctAnswer" style="display:none;">
+		<h2>Congratulations! You got the correct answer!</h2>
+		<button type="button" onclick="nextQuestion()">Next Question</button>
+	</div>
+
+	<div id="wrongAnswer" style="display:none;">
+		<h2>Sorry, that was the wrong answer. Game Over!</h2>
+		<button type="button" onclick="restart()">Restart Quiz</button>
+	</div>
+
+	<script>
+		var currentQuestion = 1;
+		function validateAnswer(questionNum) {
+			var radios = document.getElementsByName("question" + questionNum);
+			var isChecked = false;
+			for (var i = 0; i < radios.length; i++) {
+				if (radios[i].checked) {
+					isChecked = true;
+					if (radios[i].value === "option1") {
+						document.getElementById("question" + currentQuestion).style.display = "none";
+						if (currentQuestion === 5) {
+							document.getElementById("correctAnswer").style.display = "block";
+						} else {
+							document.getElementById("correctAnswer").style.display = "block";
+						}
+					} else {
+						document.getElementById("wrongAnswer").style.display = "block";
+					}
+					break;
+				}
+			}
+			if (!isChecked) {
+				alert("Please select an option.");
+			}
+		}
+
+		function nextQuestion() {
+			currentQuestion++;
+			document.getElementById("correctAnswer").style.display = "none";
+			document.getElementById("question" + currentQuestion).style.display = "block";
+		}
+
+		function restart() {
+			currentQuestion = 1;
+			document.getElementById("wrongAnswer").style.display = "none";
+			document.getElementById("question1").style.display = "block";}
+	</script>
+</body>
+</html>
+
+
