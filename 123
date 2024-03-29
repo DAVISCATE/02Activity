@@ -1,0 +1,23 @@
+let cartItems = [];
+
+function addToCart(id, name, price) {
+    cartItems.push({ id, name, price });
+    updateCart();
+}
+
+function updateCart() {
+    const cartElement = document.getElementById('cart');
+    cartElement.innerHTML = '';
+    cartItems.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+        cartElement.appendChild(li);
+    });
+}
+
+function checkout() {
+    // Here you can implement your payment method logic
+    alert('Thank you for your purchase!');
+    cartItems = [];
+    updateCart();
+}
